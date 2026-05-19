@@ -1,0 +1,1012 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🧁 FunFact Libya - Kuis Benar/Salah Pinky Lucu ✨</title>
+    <style>
+        :root {
+            --pink-100: #fff0f5;
+            --pink-200: #ffe0ec;
+            --pink-300: #ffb6d3;
+            --pink-400: #ff8ab5;
+            --pink-500: #ff5c8a;
+            --pink-600: #e84a7a;
+            --pink-700: #d43a6a;
+            --pink-800: #b82d58;
+            --white: #ffffff;
+            --gold: #ffd166;
+            --mint: #a7e8d6;
+            --lavender: #e8d5f5;
+            --shadow-soft: 0 8px 32px rgba(255, 92, 138, 0.2);
+            --shadow-card: 0 12px 40px rgba(255, 92, 138, 0.25);
+            --shadow-btn: 0 6px 20px rgba(255, 92, 138, 0.35);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', 'Poppins', 'Nunito', sans-serif;
+            background: linear-gradient(135deg, #ffe0ec 0%, #ffd1e8 20%, #ffc2dd 40%, #ffdae9 60%, #ffe8f2 80%, #fff0f5 100%);
+            background-attachment: fixed;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+            position: relative;
+            overflow-x: hidden;
+            cursor: default;
+        }
+
+        /* Floating decorations */
+        .floating-decorations {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 0;
+        }
+
+        .float-item {
+            position: absolute;
+            animation: floatAround 8s ease-in-out infinite;
+            opacity: 0.6;
+            font-size: 2rem;
+            user-select: none;
+        }
+        .float-item:nth-child(1) {
+            top: 5%;
+            left: 8%;
+            animation-delay: 0s;
+            font-size: 2.5rem;
+        }
+        .float-item:nth-child(2) {
+            top: 12%;
+            right: 10%;
+            animation-delay: 1.5s;
+            font-size: 2rem;
+        }
+        .float-item:nth-child(3) {
+            top: 60%;
+            left: 5%;
+            animation-delay: 3s;
+            font-size: 2.8rem;
+        }
+        .float-item:nth-child(4) {
+            top: 70%;
+            right: 8%;
+            animation-delay: 4.5s;
+            font-size: 2.2rem;
+        }
+        .float-item:nth-child(5) {
+            top: 30%;
+            left: 90%;
+            animation-delay: 2s;
+            font-size: 1.8rem;
+        }
+        .float-item:nth-child(6) {
+            top: 85%;
+            left: 50%;
+            animation-delay: 5.5s;
+            font-size: 2.3rem;
+        }
+        .float-item:nth-child(7) {
+            top: 20%;
+            left: 45%;
+            animation-delay: 6.5s;
+            font-size: 2rem;
+        }
+        .float-item:nth-child(8) {
+            top: 50%;
+            right: 15%;
+            animation-delay: 7s;
+            font-size: 2.6rem;
+        }
+
+        @keyframes floatAround {
+            0%,
+            100% {
+                transform: translateY(0) translateX(0) rotate(0deg) scale(1);
+            }
+            15% {
+                transform: translateY(-30px) translateX(15px) rotate(6deg) scale(1.1);
+            }
+            30% {
+                transform: translateY(-15px) translateX(-10px) rotate(-4deg) scale(0.95);
+            }
+            45% {
+                transform: translateY(-40px) translateX(20px) rotate(8deg) scale(1.08);
+            }
+            60% {
+                transform: translateY(-5px) translateX(-18px) rotate(-6deg) scale(1.02);
+            }
+            75% {
+                transform: translateY(-25px) translateX(8px) rotate(3deg) scale(0.98);
+            }
+            90% {
+                transform: translateY(-35px) translateX(-5px) rotate(-2deg) scale(1.05);
+            }
+        }
+
+        /* Main Container */
+        .main-container {
+            position: relative;
+            z-index: 1;
+            width: 100%;
+            max-width: 600px;
+        }
+
+        /* Card */
+        .game-card {
+            background: var(--white);
+            border-radius: 30px;
+            padding: 30px 25px 35px;
+            box-shadow: var(--shadow-card);
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+            border: 3px solid #ffd1e8;
+            transition: all 0.4s ease;
+        }
+
+        .game-card::before {
+            content: '';
+            position: absolute;
+            top: -60px;
+            right: -60px;
+            width: 140px;
+            height: 140px;
+            background: radial-gradient(circle, #ffd1e8 0%, transparent 70%);
+            border-radius: 50%;
+            z-index: 0;
+            opacity: 0.7;
+        }
+        .game-card::after {
+            content: '';
+            position: absolute;
+            bottom: -40px;
+            left: -40px;
+            width: 120px;
+            height: 120px;
+            background: radial-gradient(circle, #ffe0ec 0%, transparent 70%);
+            border-radius: 50%;
+            z-index: 0;
+            opacity: 0.6;
+        }
+
+        .game-card>* {
+            position: relative;
+            z-index: 1;
+        }
+
+        /* Header */
+        .game-header {
+            margin-bottom: 10px;
+        }
+        .game-title {
+            font-size: 2rem;
+            font-weight: 800;
+            color: var(--pink-600);
+            letter-spacing: -1px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            flex-wrap: wrap;
+        }
+        .game-title .icon-bounce {
+            display: inline-block;
+            animation: bounceTitle 0.7s ease-in-out infinite alternate;
+        }
+        .game-title .icon-bounce:nth-child(1) {
+            animation-delay: 0s;
+        }
+        .game-title .icon-bounce:nth-child(2) {
+            animation-delay: 0.2s;
+        }
+        .game-title .icon-bounce:nth-child(3) {
+            animation-delay: 0.4s;
+        }
+
+        @keyframes bounceTitle {
+            0% {
+                transform: translateY(0);
+            }
+            100% {
+                transform: translateY(-12px);
+            }
+        }
+
+        .game-subtitle {
+            font-size: 1rem;
+            color: #c97da6;
+            font-weight: 600;
+            margin-top: 2px;
+            letter-spacing: 1px;
+            background: #fff0f5;
+            display: inline-block;
+            padding: 4px 16px;
+            border-radius: 20px;
+        }
+
+        /* Progress */
+        .progress-section {
+            margin: 20px 0;
+        }
+        .progress-info {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 8px;
+            font-weight: 700;
+            color: var(--pink-600);
+            font-size: 0.9rem;
+        }
+        .progress-bar-outer {
+            width: 100%;
+            height: 18px;
+            background: #ffe8f2;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: inset 0 3px 6px rgba(0, 0, 0, 0.06);
+            border: 2px solid #ffd1e8;
+        }
+        .progress-bar-inner {
+            height: 100%;
+            background: linear-gradient(90deg, #ffb6d3, #ff5c8a, #ff3477);
+            border-radius: 20px;
+            transition: width 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+            box-shadow: 0 0 12px rgba(255, 92, 138, 0.5);
+            position: relative;
+        }
+        .progress-bar-inner::after {
+            content: '';
+            position: absolute;
+            right: 2px;
+            top: 3px;
+            width: 10px;
+            height: 10px;
+            background: white;
+            border-radius: 50%;
+            opacity: 0.7;
+        }
+
+        /* Score display */
+        .score-mini {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            font-weight: 700;
+            color: var(--pink-600);
+            font-size: 1rem;
+            background: #fff5f8;
+            padding: 6px 14px;
+            border-radius: 20px;
+            border: 2px dashed #ffb6d3;
+        }
+
+        /* Question */
+        .question-area {
+            margin: 20px 0 10px;
+            padding: 20px 18px;
+            background: linear-gradient(135deg, #fff5f9, #ffe8f2);
+            border-radius: 24px;
+            border: 2px dashed #ffb6d3;
+            position: relative;
+        }
+        .question-emoji {
+            font-size: 3.5rem;
+            display: block;
+            margin-bottom: 8px;
+            animation: wiggle 2s ease-in-out infinite;
+        }
+        @keyframes wiggle {
+            0%,
+            100% {
+                transform: rotate(0);
+            }
+            25% {
+                transform: rotate(-8deg);
+            }
+            75% {
+                transform: rotate(8deg);
+            }
+        }
+        .question-number {
+            font-size: 0.8rem;
+            font-weight: 700;
+            color: #c97da6;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-bottom: 6px;
+        }
+        .question-text {
+            font-size: 1.25rem;
+            font-weight: 700;
+            color: #5a3e4b;
+            line-height: 1.5;
+        }
+
+        /* Buttons */
+        .btn-group {
+            display: flex;
+            gap: 16px;
+            justify-content: center;
+            margin: 18px 0 10px;
+            flex-wrap: wrap;
+        }
+        .btn {
+            padding: 16px 36px;
+            font-size: 1.2rem;
+            font-weight: 700;
+            border: none;
+            border-radius: 50px;
+            cursor: pointer;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            letter-spacing: 1px;
+            position: relative;
+            overflow: hidden;
+            outline: none;
+            min-width: 130px;
+        }
+        .btn:active {
+            transform: scale(0.92);
+        }
+        .btn-true {
+            background: linear-gradient(135deg, #ff8ab5, #ff5c8a);
+            color: white;
+            box-shadow: var(--shadow-btn);
+            border: 3px solid #ff3d7f;
+        }
+        .btn-true:hover {
+            background: linear-gradient(135deg, #ff9dc4, #ff6d98);
+            box-shadow: 0 10px 28px rgba(255, 92, 138, 0.5);
+            transform: translateY(-3px);
+        }
+        .btn-true::before {
+            content: '✅ ';
+        }
+        .btn-false {
+            background: linear-gradient(135deg, #f8c8d8, #f0a0bb);
+            color: #6b3a4e;
+            box-shadow: 0 6px 20px rgba(200, 120, 150, 0.35);
+            border: 3px solid #e898b0;
+        }
+        .btn-false:hover {
+            background: linear-gradient(135deg, #fad4e1, #f3b3c9);
+            box-shadow: 0 10px 28px rgba(200, 120, 150, 0.5);
+            transform: translateY(-3px);
+        }
+        .btn-false::before {
+            content: '❌ ';
+        }
+        .btn:disabled {
+            opacity: 0.55;
+            cursor: not-allowed;
+            pointer-events: none;
+            filter: grayscale(20%);
+        }
+
+        /* Feedback */
+        .feedback-box {
+            margin: 16px 0;
+            padding: 16px 20px;
+            border-radius: 20px;
+            font-weight: 700;
+            font-size: 1rem;
+            line-height: 1.6;
+            display: none;
+            animation: popIn 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            text-align: left;
+        }
+        .feedback-box.show {
+            display: block;
+        }
+        .feedback-correct {
+            background: #e0fff0;
+            border: 2px solid #7ed9b0;
+            color: #1a6b40;
+        }
+        .feedback-wrong {
+            background: #fff0f0;
+            border: 2px solid #f5a0b0;
+            color: #8b2040;
+        }
+        @keyframes popIn {
+            0% {
+                transform: scale(0.7);
+                opacity: 0;
+            }
+            70% {
+                transform: scale(1.04);
+            }
+            100% {
+                transform: scale(1);
+                opacity: 1;
+            }
+        }
+        .feedback-icon {
+            font-size: 2rem;
+            display: inline-block;
+            animation: bounceFeedback 0.5s ease-in-out infinite alternate;
+        }
+        @keyframes bounceFeedback {
+            0% {
+                transform: translateY(0);
+            }
+            100% {
+                transform: translateY(-8px);
+            }
+        }
+
+        /* Next button */
+        .btn-next {
+            background: linear-gradient(135deg, #ffd166, #ffb347);
+            color: #5a3e1b;
+            padding: 14px 40px;
+            font-size: 1.1rem;
+            border: 3px solid #e8a020;
+            box-shadow: 0 6px 20px rgba(255, 180, 60, 0.4);
+            display: none;
+            margin: 6px auto 0;
+            animation: pulseNext 1.5s ease-in-out infinite;
+        }
+        .btn-next:hover {
+            box-shadow: 0 10px 28px rgba(255, 180, 60, 0.6);
+            transform: translateY(-3px);
+        }
+        .btn-next.show {
+            display: inline-block;
+        }
+        @keyframes pulseNext {
+            0%,
+            100% {
+                box-shadow: 0 6px 20px rgba(255, 180, 60, 0.4);
+            }
+            50% {
+                box-shadow: 0 6px 35px rgba(255, 180, 60, 0.8);
+            }
+        }
+
+        /* Result Screen */
+        .result-screen {
+            display: none;
+            text-align: center;
+            animation: fadeInUp 0.6s ease-out;
+        }
+        .result-screen.show {
+            display: block;
+        }
+        @keyframes fadeInUp {
+            0% {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        .result-emoji {
+            font-size: 5rem;
+            animation: bounceTitle 0.5s ease-in-out infinite alternate;
+        }
+        .result-score {
+            font-size: 3.5rem;
+            font-weight: 900;
+            color: var(--pink-600);
+            margin: 10px 0;
+        }
+        .result-label {
+            font-size: 1.2rem;
+            color: #9b6d80;
+            font-weight: 600;
+        }
+        .result-message {
+            font-size: 1.3rem;
+            font-weight: 700;
+            color: #5a3e4b;
+            margin: 10px 0;
+            padding: 14px 20px;
+            background: #fff5f9;
+            border-radius: 20px;
+            border: 2px dashed #ffb6d3;
+        }
+        .result-stars {
+            font-size: 3rem;
+            letter-spacing: 8px;
+            margin: 10px 0;
+        }
+        .btn-restart {
+            background: linear-gradient(135deg, #ff5c8a, #e84a7a);
+            color: white;
+            padding: 16px 40px;
+            font-size: 1.2rem;
+            font-weight: 700;
+            border: none;
+            border-radius: 50px;
+            cursor: pointer;
+            letter-spacing: 1px;
+            box-shadow: var(--shadow-btn);
+            margin-top: 16px;
+            transition: all 0.3s ease;
+            border: 3px solid #d43a6a;
+        }
+        .btn-restart:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 12px 32px rgba(255, 92, 138, 0.5);
+        }
+
+        /* Confetti */
+        .confetti-container {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 999;
+        }
+        .confetti-piece {
+            position: absolute;
+            width: 14px;
+            height: 14px;
+            border-radius: 4px;
+            animation: confettiFall 2.5s ease-out forwards;
+        }
+        @keyframes confettiFall {
+            0% {
+                transform: translateY(-120px) rotate(0deg) scale(1);
+                opacity: 1;
+            }
+            60% {
+                opacity: 1;
+            }
+            100% {
+                transform: translateY(105vh) rotate(720deg) scale(0.3);
+                opacity: 0;
+            }
+        }
+
+        /* Sparkle cursor trail */
+        .sparkle {
+            position: fixed;
+            pointer-events: none;
+            font-size: 1.2rem;
+            animation: sparkleFade 0.7s ease-out forwards;
+            z-index: 1000;
+        }
+        @keyframes sparkleFade {
+            0% {
+                opacity: 1;
+                transform: scale(1) translateY(0);
+            }
+            100% {
+                opacity: 0;
+                transform: scale(0.2) translateY(-30px);
+            }
+        }
+
+        /* Responsive */
+        @media (max-width: 480px) {
+            .game-card {
+                padding: 20px 15px 25px;
+                border-radius: 24px;
+            }
+            .game-title {
+                font-size: 1.4rem;
+            }
+            .question-text {
+                font-size: 1.05rem;
+            }
+            .btn {
+                padding: 14px 24px;
+                font-size: 1rem;
+                min-width: 100px;
+            }
+            .question-emoji {
+                font-size: 2.8rem;
+            }
+            .btn-group {
+                gap: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Floating decorations -->
+    <div class="floating-decorations">
+        <span class="float-item">🌸</span>
+        <span class="float-item">🎀</span>
+        <span class="float-item">💖</span>
+        <span class="float-item">🦩</span>
+        <span class="float-item">🍬</span>
+        <span class="float-item">✨</span>
+        <span class="float-item">🧁</span>
+        <span class="float-item">💕</span>
+    </div>
+
+    <!-- Confetti container -->
+    <div class="confetti-container" id="confettiContainer"></div>
+
+    <!-- Main Game -->
+    <div class="main-container">
+        <div class="game-card" id="gameCard">
+            <!-- Game Screen -->
+            <div id="gameScreen">
+                <div class="game-header">
+                    <div class="game-title">
+                        <span class="icon-bounce">🇱🇾</span>
+                        <span>FunFact Libya</span>
+                        <span class="icon-bounce">🧁</span>
+                    </div>
+                    <div class="game-subtitle">🎀 Kuis Benar / Salah Lucu 🎀</div>
+                </div>
+
+                <!-- Progress -->
+                <div class="progress-section">
+                    <div class="progress-info">
+                        <span>📝 Soal <span id="currentQ">1</span>/15</span>
+                        <span class="score-mini">⭐ <span id="liveScore">0</span> poin</span>
+                    </div>
+                    <div class="progress-bar-outer">
+                        <div class="progress-bar-inner" id="progressBar" style="width: 0%;"></div>
+                    </div>
+                </div>
+
+                <!-- Question -->
+                <div class="question-area">
+                    <span class="question-emoji" id="questionEmoji">🤔</span>
+                    <div class="question-number" id="questionNumberLabel">SOAL NOMOR 1</div>
+                    <div class="question-text" id="questionText"></div>
+                </div>
+
+                <!-- Buttons -->
+                <div class="btn-group" id="btnGroup">
+                    <button class="btn btn-true" id="btnTrue" onclick="answer(true)">BENAR</button>
+                    <button class="btn btn-false" id="btnFalse" onclick="answer(false)">SALAH</button>
+                </div>
+
+                <!-- Feedback -->
+                <div class="feedback-box" id="feedbackBox">
+                    <span class="feedback-icon" id="feedbackIcon"></span>
+                    <span id="feedbackText"></span>
+                </div>
+
+                <!-- Next Button -->
+                <button class="btn btn-next" id="btnNext" onclick="nextQuestion()">
+                    Lanjut ya! 🌟
+                </button>
+            </div>
+
+            <!-- Result Screen -->
+            <div class="result-screen" id="resultScreen">
+                <div class="result-emoji" id="resultEmoji">🏆</div>
+                <div class="result-label">SKOR KAMU:</div>
+                <div class="result-score" id="resultScore">0/15</div>
+                <div class="result-stars" id="resultStars"></div>
+                <div class="result-message" id="resultMessage"></div>
+                <button class="btn-restart" onclick="restartGame()">
+                    🔄 Main Lagi Yuk!
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // ==================== SOAL DATABASE ====================
+        const questions = [{
+            id: 1,
+            emoji: "🏜️",
+            text: "Libya adalah negara terbesar keempat di Afrika berdasarkan luas wilayah.",
+            answer: true,
+            explanation: "✅ Benar! Libya adalah negara terbesar ke-4 di Afrika setelah Aljazair, Republik Demokratik Kongo, dan Sudan. Luasnya sekitar 1,76 juta km² — wow, gede banget ya! 🏜️"
+        }, {
+            id: 2,
+            emoji: "🏙️",
+            text: "Ibu kota Libya adalah Benghazi.",
+            answer: false,
+            explanation: "❌ Salah! Ibu kota Libya adalah <b>Tripoli</b>, bukan Benghazi. Benghazi adalah kota terbesar kedua di Libya. Tripoli terletak di pesisir Laut Mediterania yang cantik! 🌊"
+        }, {
+            id: 3,
+            emoji: "☀️",
+            text: "Sekitar 90% wilayah Libya adalah Gurun Sahara.",
+            answer: true,
+            explanation: "✅ Benar! Sekitar 90% wilayah Libya ditutupi oleh Gurun Sahara yang luas dan eksotis. Makanya Libya termasuk negara paling kering di dunia — jangan lupa bawa sunscreen ya! ☀️🧴"
+        }, {
+            id: 4,
+            emoji: "🌋",
+            text: "Libya memiliki gunung berapi aktif yang masih meletus hingga saat ini.",
+            answer: false,
+            explanation: "❌ Salah! Libya <b>tidak memiliki gunung berapi aktif</b>. Tenang aja, di Libya nggak ada drama letusan gunung. Aman sentosa! 😄🌋🚫"
+        }, {
+            id: 5,
+            emoji: "🗺️",
+            text: "Libya berbatasan langsung dengan 6 negara.",
+            answer: true,
+            explanation: "✅ Benar! Libya berbatasan dengan <b>6 negara</b>: Mesir, Sudan, Chad, Niger, Aljazair, dan Tunisia. Plus satu lagi — Laut Mediterania di utara! 🌍"
+        }, {
+            id: 6,
+            emoji: "💵",
+            text: "Mata uang resmi Libya adalah Dinar Libya.",
+            answer: true,
+            explanation: "✅ Benar! Mata uang Libya adalah <b>Dinar Libya (LYD)</b>. Satu Dinar Libya dibagi menjadi 1.000 dirham. Keren kan namanya? 💰✨"
+        }, {
+            id: 7,
+            emoji: "🗣️",
+            text: "Bahasa resmi Libya adalah bahasa Prancis.",
+            answer: false,
+            explanation: "❌ Salah! Bahasa resmi Libya adalah <b>Bahasa Arab</b>. Bahasa Prancis bukan bahasa resmi di sini. Tapi banyak juga yang bisa bahasa Inggris dan Italia lho! 🗣️🇱🇾"
+        }, {
+            id: 8,
+            emoji: "🎌",
+            text: "Bendera Libya pernah seluruhnya berwarna hijau polos tanpa simbol apapun.",
+            answer: true,
+            explanation: "✅ Benar! Di era Muammar Gaddafi (1977–2011), bendera Libya hanya berwarna <b>hijau polos</b> tanpa simbol. Ini satu-satunya bendera nasional di dunia yang polos tanpa desain! 🟢🎌"
+        }, {
+            id: 9,
+            emoji: "🛢️",
+            text: "Libya adalah negara penghasil minyak terbesar di Afrika.",
+            answer: false,
+            explanation: "❌ Salah! Penghasil minyak terbesar di Afrika adalah <b>Nigeria</b>. Libya biasanya berada di posisi 3 atau 4. Tapi minyak tetap jadi tulang punggung ekonomi Libya! 🛢️📊"
+        }, {
+            id: 10,
+            emoji: "🏛️",
+            text: "Kota kuno peninggalan Romawi bernama Leptis Magna terletak di Libya.",
+            answer: true,
+            explanation: "✅ Benar! <b>Leptis Magna</b> adalah situs kota Romawi kuno yang megah di pesisir Libya. Kota ini adalah Situs Warisan Dunia UNESCO — arsitekturnya stunning banget! 🏛️✨"
+        }, {
+            id: 11,
+            emoji: "🌳",
+            text: "Libya memiliki hutan hujan tropis di bagian selatannya.",
+            answer: false,
+            explanation: "❌ Salah! Libya <b>tidak punya hutan hujan tropis</b>. Iklimnya gurun dan semi-kering. Kalau mau hutan hujan tropis, mending ke Indonesia aja! 🌳😆🇮🇩"
+        }, {
+            id: 12,
+            emoji: "🎉",
+            text: "Libya merdeka pada tahun 1951.",
+            answer: true,
+            explanation: "✅ Benar! Libya merdeka pada <b>24 Desember 1951</b> dari penjajahan Italia dan menjadi Kerajaan Libya. Sekarang Libya adalah negara republik.🎂🇱🇾"
+        }, {
+            id: 13,
+            emoji: "💧",
+            text: "Libya memiliki sungai permanen yang mengalir sepanjang tahun.",
+            answer: false,
+            explanation: "❌ Salah! Libya <b>tidak memiliki satu pun sungai permanen</b>. Semua sungai di Libya bersifat musiman (wadi). Tapi Libya punya Great Man-Made River, proyek irigasi raksasa bawah tanah! 💧🔧"
+        }, {
+            id: 14,
+            emoji: "🤝",
+            text: "Libya adalah anggota OPEC (Organization of Petroleum Exporting Countries).",
+            answer: true,
+            explanation: "✅ Benar! Libya adalah <b>anggota OPEC</b> sejak tahun 1962. Sebagai negara penghasil minyak, Libya punya kursi di organisasi negara pengekspor minyak dunia. 🤝🛢️"
+        }, {
+            id: 15,
+            emoji: "👥",
+            text: "Populasi Libya lebih dari 50 juta jiwa.",
+            answer: false,
+            explanation: "❌ Salah! Populasi Libya hanya sekitar <b>7 juta jiwa</b> — jauh dari 50 juta. Luas sih besar, tapi penduduknya nggak sebanyak itu. Mayoritas tinggal di kota pesisir! 👥🏙️"
+        }];
+
+        // ==================== GAME STATE ====================
+        let currentIndex = 0;
+        let score = 0;
+        let answered = false;
+
+        // ==================== DOM ELEMENTS ====================
+        const gameScreen = document.getElementById('gameScreen');
+        const resultScreen = document.getElementById('resultScreen');
+        const questionText = document.getElementById('questionText');
+        const questionEmoji = document.getElementById('questionEmoji');
+        const questionNumberLabel = document.getElementById('questionNumberLabel');
+        const currentQSpan = document.getElementById('currentQ');
+        const liveScoreSpan = document.getElementById('liveScore');
+        const progressBar = document.getElementById('progressBar');
+        const feedbackBox = document.getElementById('feedbackBox');
+        const feedbackIcon = document.getElementById('feedbackIcon');
+        const feedbackText = document.getElementById('feedbackText');
+        const btnTrue = document.getElementById('btnTrue');
+        const btnFalse = document.getElementById('btnFalse');
+        const btnNext = document.getElementById('btnNext');
+        const btnGroup = document.getElementById('btnGroup');
+        const confettiContainer = document.getElementById('confettiContainer');
+        const resultEmoji = document.getElementById('resultEmoji');
+        const resultScore = document.getElementById('resultScore');
+        const resultStars = document.getElementById('resultStars');
+        const resultMessage = document.getElementById('resultMessage');
+
+        // ==================== FUNCTIONS ====================
+        function loadQuestion() {
+            if (currentIndex >= questions.length) {
+                showResult();
+                return;
+            }
+            answered = false;
+            const q = questions[currentIndex];
+            questionText.textContent = q.text;
+            questionEmoji.textContent = q.emoji;
+            questionNumberLabel.textContent = `SOAL NOMOR ${q.id}`;
+            currentQSpan.textContent = currentIndex + 1;
+            liveScoreSpan.textContent = score;
+            progressBar.style.width = ((currentIndex) / questions.length) * 100 + '%';
+
+            // Reset UI
+            feedbackBox.classList.remove('show', 'feedback-correct', 'feedback-wrong');
+            feedbackBox.style.display = 'none';
+            btnNext.classList.remove('show');
+            btnTrue.disabled = false;
+            btnFalse.disabled = false;
+            btnGroup.style.opacity = '1';
+            btnGroup.style.pointerEvents = 'auto';
+        }
+
+        function answer(userAnswer) {
+            if (answered) return;
+            answered = true;
+
+            const q = questions[currentIndex];
+            const isCorrect = (userAnswer === q.answer);
+
+            // Disable buttons
+            btnTrue.disabled = true;
+            btnFalse.disabled = true;
+            btnGroup.style.opacity = '0.7';
+            btnGroup.style.pointerEvents = 'none';
+
+            // Update score
+            if (isCorrect) {
+                score++;
+                liveScoreSpan.textContent = score;
+                feedbackBox.className = 'feedback-box show feedback-correct';
+                feedbackIcon.textContent = '🎉';
+                feedbackText.innerHTML = q.explanation;
+                spawnConfetti();
+            } else {
+                feedbackBox.className = 'feedback-box show feedback-wrong';
+                feedbackIcon.textContent = '😅';
+                feedbackText.innerHTML = q.explanation;
+            }
+
+            feedbackBox.style.display = 'block';
+            btnNext.classList.add('show');
+
+            // Update progress
+            progressBar.style.width = ((currentIndex + 1) / questions.length) * 100 + '%';
+        }
+
+        function nextQuestion() {
+            currentIndex++;
+            if (currentIndex >= questions.length) {
+                showResult();
+            } else {
+                loadQuestion();
+                // Scroll to top of card smoothly
+                document.getElementById('gameCard').scrollIntoView({ behavior: 'smooth', block: 'start' });
+            }
+        }
+
+        function showResult() {
+            gameScreen.style.display = 'none';
+            resultScreen.classList.add('show');
+            resultScore.textContent = score + '/15';
+
+            // Emoji & stars based on score
+            let emoji, stars, message;
+            if (score === 15) {
+                emoji = '👑';
+                stars = '⭐⭐⭐⭐⭐';
+                message = '🎀 SEMPURNA! Kamu jenius banget soal Libya! <br>Pantengin terus fakta-fakta seru dunia ya! 💖';
+                spawnConfetti();
+                setTimeout(spawnConfetti, 500);
+                setTimeout(spawnConfetti, 1000);
+            } else if (score >= 12) {
+                emoji = '🌟';
+                stars = '⭐⭐⭐⭐';
+                message = 'Wah keren banget! Kamu hampir sempurna! <br>Pengetahuanmu tentang Libya luar biasa! ✨';
+                spawnConfetti();
+            } else if (score >= 8) {
+                emoji = '😊';
+                stars = '⭐⭐⭐';
+                message = 'Lumayan banget! Kamu cukup tahu banyak tentang Libya. <br>Yuk belajar lagi biar makin jago! 📚';
+            } else if (score >= 5) {
+                emoji = '🤗';
+                stars = '⭐⭐';
+                message = 'Nggak apa-apa! Sekarang kamu jadi tahu fakta baru tentang Libya. <br>Main lagi yuk biar makin hafal! 💪';
+            } else {
+                emoji = '🥺';
+                stars = '⭐';
+                message = 'Aduh, masih perlu banyak belajar nih. <br>Tapi tenang, cobain lagi aja — belajar itu seru kok! 🌸';
+            }
+
+            resultEmoji.textContent = emoji;
+            resultStars.textContent = stars;
+            resultMessage.innerHTML = message;
+            progressBar.style.width = '100%';
+
+            // Hide game elements
+            feedbackBox.style.display = 'none';
+            btnNext.classList.remove('show');
+            btnGroup.style.display = 'none';
+        }
+
+        function restartGame() {
+            currentIndex = 0;
+            score = 0;
+            answered = false;
+            gameScreen.style.display = 'block';
+            resultScreen.classList.remove('show');
+            btnGroup.style.display = 'flex';
+            btnGroup.style.opacity = '1';
+            btnGroup.style.pointerEvents = 'auto';
+            feedbackBox.classList.remove('show', 'feedback-correct', 'feedback-wrong');
+            feedbackBox.style.display = 'none';
+            btnNext.classList.remove('show');
+            btnTrue.disabled = false;
+            btnFalse.disabled = false;
+            liveScoreSpan.textContent = '0';
+            progressBar.style.width = '0%';
+            loadQuestion();
+            document.getElementById('gameCard').scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+
+        // ==================== CONFETTI ====================
+        function spawnConfetti() {
+            const colors = [
+                '#ff5c8a', '#ff8ab5', '#ffb6d3', '#ffd166', '#ffb347',
+                '#ff6b9d', '#ff9ec4', '#ffd1e8', '#ffe0ec', '#ffc2dd',
+                '#e8a0c8', '#f7c8e0', '#ff3477', '#ff7096', '#ffd700',
+                '#ffabcb', '#f8a5c2', '#ffc8dd', '#ffb3c6', '#ffe5b4'
+            ];
+            const emojis = ['💖', '🌸', '✨', '🎀', '🧁', '💕', '🌟', '🍬', '🦩', '💝'];
+
+            for (let i = 0; i < 50; i++) {
+                const piece = document.createElement('div');
+                piece.classList.add('confetti-piece');
+                piece.style.left = Math.random() * 100 + '%';
+                piece.style.top = -(Math.random() * 40 + 10) + 'px';
+                piece.style.backgroundColor = colors[Math.floor(Math.random() * colors.length)];
+                piece.style.animationDuration = (Math.random() * 2 + 2) + 's';
+                piece.style.animationDelay = Math.random() * 0.6 + 's';
+                piece.style.width = (Math.random() * 12 + 8) + 'px';
+                piece.style.height = (Math.random() * 12 + 8) + 'px';
+                piece.style.borderRadius = Math.random() > 0.5 ? '50%' : '3px';
+                piece.textContent = Math.random() > 0.7 ? emojis[Math.floor(Math.random() * emojis.length)] :
+                    '';
+                piece.style.fontSize = '14px';
+                piece.style.display = 'flex';
+                piece.style.alignItems = 'center';
+                piece.style.justifyContent = 'center';
+                confettiContainer.appendChild(piece);
+
+                // Remove after animation
+                setTimeout(() => {
+                    if (piece.parentNode) piece.parentNode.removeChild(piece);
+                }, 3000);
+            }
+        }
+
+        // ==================== SPARKLE CURSOR TRAIL ====================
+        document.addEventListener('mousemove', function(e) {
+            const sparkle = document.createElement('span');
+            sparkle.classList.add('sparkle');
+            sparkle.textContent = ['✨', '💖', '🌸', '💕', '🎀'][Math.floor(Math.random() * 5)];
+            sparkle.style.left = e.clientX + 'px';
+            sparkle.style.top = e.clientY + 'px';
+            document.body.appendChild(sparkle);
+            setTimeout(() => {
+                if (sparkle.parentNode) sparkle.parentNode.removeChild(sparkle);
+            }, 700);
+        });
+
+        // ==================== INIT ====================
+        loadQuestion();
+    </script>
+</body>
+</html>
